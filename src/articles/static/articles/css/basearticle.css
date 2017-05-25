@@ -22,17 +22,38 @@ li { font-size: 1em; text-align: left; margin-bottom: 7px; }
 
 h1, h2, h3, h4 {margin: 10px 5px 7px 5px; color: blue;}
 p {font-size: 0.8em; margin: 7px 5px 7px 5px; }
+a {text-decoration: none; text-align: center;}
 
 
 /* -------------HOME container------------   */
-#header {position: fixed; top: 0; padding-left: 10px; background-color: white; width: 100%; border-bottom: solid; border-bottom-width: 0.3px; border-color: rgba(96, 125, 139, 0.38); z-index: 99;}
+#header {
+  position: fixed; 
+  top: 0; 
+  padding-left: 10px; 
+  background-color: white; 
+  width: 100%;
+  height: 120px;
+  border-bottom: solid; border-bottom-width: 0.3px; border-color: rgba(96, 125, 139, 0.38);
+}
 
 
-.home-container {width: 100%; min-height: 100%; margin-left: 0; margin-right: 0; margin-top: 70px; margin-bottom: 200px;}
+
+/* -------------this is for LOGO icon and text------------   */
+#logo {display: inline-block; margin: 4px; }
+#logo span {font-size: 18px; }
+#logoicon {display: inline-block; vertical-align: middle; }
+
+.top {margin: 2px 0; padding-bottom: 7px; }
+.toplist li {display:inline; padding: 2rem 1rem; font-size: 14px; font-weight: 800;}
+.top li a {padding: 8px; color: white; background-color: blue; border-radius: 0px;}
+/* ----------end of this is for LOGO icon and text------------   */
+
+
+.home-container {width: 100%; min-height: 100%; margin-left: 0; margin-right: 0; margin-top: 130px; margin-bottom: 100px;}
 
 #leftbarbase {
     position: fixed;
-    top: 70px;
+    top: 130px;
     bottom: 0;
     left: 0;
     padding-bottom: 2em;
@@ -67,45 +88,34 @@ p {font-size: 0.8em; margin: 7px 5px 7px 5px; }
   #mainmiddle {padding-bottom: 100px;}
 
 
-#rightbar {
-  position: fixed; 
-  float: left; 
-  width: 17%; 
-  min-height: 100%; 
+#rightbar {   
+  width: 15%;
+  height: 100%;
+  min-height: 100%;
   font-size: 0.9em; text-transform: uppercase; letter-spacing: 2px; text-align: left; color: #aaaaaa;
-  margin-left: 82%; 
-  margin-top: 0; border-left: solid;  border-width: 1px; border-color: rgba(96, 125, 139, 0.38);}
+  margin-left: 84%; 
+  margin-top: 0; border-left: solid;  border-width: 1px; border-color: rgba(96, 125, 139, 0.38);
+  display: block;
+
+}
 
 
  #bottom {
   clear: both;
   background-color: grey;
   height: 300px;
-  width: 100%;
-
+  width: 78%;
+  margin: 2% 2% 2% 21%;
   padding: 40px 0;
   color: #999;
   text-align: center;
   border-top: 1px solid #e5e5e5;
   background: #ECECEC;
   text-align: center;
-  font-weight: 300;
  } 
 
 
 /* ----------end of HOME container--  ----------   */
-
-
-
-
-/* -------------this is for LOGO icon and text------------   */
-#logo {display: inline-block; margin: 4px; }
-#logo span {font-size: 18px; }
-#logoicon {display: inline-block; vertical-align: middle; }
-
-.top {margin: 2px 0; padding-bottom: 7px; border-bottom: solid;  border-bottom-width: 0.3px; border-color: rgba(96, 125, 139, 0.38);}
-.top li a {padding: 8px; border: solid; color: white; background-color: blue; border-radius: 0px;}
-/* ----------end of this is for LOGO icon and text------------   */
 
 
 /* -------------this is for left side column------------   */
@@ -133,13 +143,12 @@ p {font-size: 0.8em; margin: 7px 5px 7px 5px; }
 
 /* -------end of this is for left side column-----------   */
 
-.toplist li {display:inline; padding: 2rem 1rem; font-size: 14px; font-weight: 800;}
 
-a {
-    text-decoration: none;
-    text-align: center;
 
-  }
+
+
+
+
 //a:hover { border-bottom: 1px dashed #428bca; }
 
 .dash { height: 1px; width: 30%; background: black; margin: 20px auto; }
@@ -153,15 +162,146 @@ h5 {
 
 
 
-/* iphone 5 only Mobile ----------- */
-@media only screen and (max-width: 320px) {
-}
-
 
 /* Mobile -----------outline-width:  */
-@media only screen and (min-width: 667px) {
+@media only screen and (max-width: 1024px) {
+
+
+  #leftbarbase {
+    position: fixed;
+    top: 100px;
+    left: 0;
+    padding-bottom: 2em;
+    width: 80%;
+    max-width: 400px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    z-index: 200;
+    display: none;
+    }
+
+   #leftbarbase.open {
+    display: block;
+    }
+
+  #middlebar {
+   float: left;
+   width: 99%;
+   margin-left: 1%;
+   min-height: 100%;
+   font-size: 0.9em; letter-spacing: 2px; text-align: left; margin-bottom: 15px; color: #aaaaaa;   
+   border: solid;  border-width: 0px; border-color: rgba(96, 125, 139, 0.38);   
+  }
+
+
+#rightbar {   
+  width: 99%; 
+  min-height: 100%; 
+  font-size: 0.9em; text-transform: uppercase; letter-spacing: 2px; text-align: left; color: #aaaaaa;
+  margin-left: 1%; 
+  margin-top: 0; border-left: solid;  border-width: 1px; border-color: rgba(96, 125, 139, 0.38);
+  display: block;
+  clear: both;
 }
 
-/* Desktops and laptops ----------- */
-@media only screen and (min-width: 1024px) {
+#bottom {
+  clear: both;
+  background-color: grey;
+  height: 300px;
+  width: 96%;
+  margin: 7% 2% 2% 2%;
+  padding: 40px 0;
+  color: #999;
+  text-align: center;
+  border-top: 1px solid #e5e5e5;
+  background: #ECECEC;
+  text-align: center;
+ } 
+
+
+
+                  .navOpen {
+                    overflow: hidden;
+                  }
+                  .home-container {
+                    margin-top: 20px;
+                    transition-duration: 0.5s;
+                    transition-timing-function: swing;
+                    background-color: white;
+                    width: 100%;
+                    height: 100%;
+                    position: relative;
+                    padding: 80px 40px;
+                  }
+                  .home-container.open {                    
+                    transform: translateX(50%) translateY(2%);                    
+                    -webkit-transform: translateX(50%) translateY(2%);
+                    box-shadow: 0 0 50px rgba(0, 0, 0, 0.2);
+                  }
+
+                  .openNav {
+                    transition-duration: 0.5s;
+                    transition-timing-function: swing;
+                    width: 40px;
+                    height: 40px;
+                    background-color: blue;
+                    position: fixed;
+                    top: 65px;
+                    left: 1%;
+                    z-index: 300;
+                  }
+
+         
+                  .openNav:hover {
+                    cursor: pointer;
+                  }
+
+                  
+                  .openNav .icon {
+                    transition-duration: 0.2s;
+                    position: absolute;
+                    width: 20px;
+                    height: 2px;
+                    background-color: white;
+                    top: 20px;
+                    left: 10px;
+                  }
+
+                  .openNav .icon:before,
+                  .openNav .icon:after {
+                    transition-duration: 0.5s;
+                    background-color: white;
+                    position: absolute;
+                    content: "";
+                    width: 20px;
+                    height: 2px;
+                    left: 0px;
+                  }
+                  .openNav .icon:before {
+                    top: -7px;
+                  }
+                  .openNav .icon:after {
+                    top: 7px;
+                  }
+                  .openNav.open {
+                    transform: translateX(100%) translateY(0%);
+                    -webkit-transform: translateX(100%) translateY(0%);
+                  }
+                  .openNav.open .icon {
+                    background-color: transparent;
+                  }
+                  .openNav.open .icon:before,
+                  .openNav.open .icon:after {
+                    top: 0;
+                  }
+                  .openNav.open .icon:before {
+                    transform: rotate(-45deg);
+                    -webkit-transform: rotate(-45deg);
+                  }
+                  .openNav.open .icon:after {
+                    transform: rotate(45deg);
+                    -webkit-transform: rotate(45deg);
+                  }
+                                    
+
 }

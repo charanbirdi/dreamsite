@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 
 from .models import Articles
 
@@ -9,7 +9,7 @@ from .models import Articles
 def index(request):
 	total = Articles.objects.all().count()
 	articles = Articles.objects.all()
-	paginator = Paginator(articles, 2) # Show 25 contacts per page
+	paginator = Paginator(articles, 2) # Show 2 contacts per page
 	
 	page = request.GET.get('page')
 	try:
@@ -35,4 +35,10 @@ def systemstudy(request):
 
 def transformersizing(request):
 	context = {'path': capacitorsizing}
-	return render(request, 'transformer.html', context)		
+	return render(request, 'transformer.html', context)
+
+
+def generalarticles(request, id):
+	instant = get_object_or_404(Articles, id=id)
+	context = {'html': instant.content }
+	return render(request, 'capacitor.html', context)

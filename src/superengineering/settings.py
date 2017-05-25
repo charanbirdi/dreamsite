@@ -20,7 +20,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '^^yyg5@592kuk+s8_l-_sle6&_pbr6tmo8i%i1ivd*#7ka4!4f'
+
+#SECRET_KEY = '^^yyg5@592kuk+s8_l-_sle6&_pbr6tmo8i%i1ivd*#7ka4!4f'
+SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', '^^yyg5@592kuk+s8_l-_sle6&_pbr6tmo8i%i1ivd*#7ka4!4f')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -82,8 +84,12 @@ WSGI_APPLICATION = 'superengineering.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'dreamsitedb',
+        'USER': 'charanbirdi',
+        'PASSWORD': 'googleapple!1',
+        'HOST': 'localhost',
+        'PORT': '',
     }
 }
 
