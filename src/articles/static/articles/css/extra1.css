@@ -1,55 +1,133 @@
 * {
-  margin: 0px;
-  padding: 2px;
   box-sizing: border-box;
-  color: black;  
+  color: black;
   font-family: 'Roboto';
   font-weight: 400;
   letter-spacing: 0.9px;
   line-height: 1.4em;
 }
 
-body { margin: 0px; font-size: 18px;}
-li { font-size: 1em; text-align: left; margin-bottom: 7px; }
-html, body {height: auto; width: 100%; }
+html {height: 100%; width: 100%;}
 
-//h1, h2, h3, h4, p, small {margin: 10px 10px 5px 10px; }
-//p, small {margin: 10px 10px 5px 10px; }
+body { 
+  height: 100%;
+  width: 100%;
+  margin: 0px; 
+  font-size: 18px;
+  overflow-x:hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+li { font-size: 1em; text-align: left; margin-bottom: 7px; }
+
+h1, h2, h3, h4 {margin: 10px 5px 7px 5px; color: blue;}
+p {font-size: 0.8em; margin: 7px 5px 7px 5px; }
+a {text-decoration: none; text-align: center;}
 
 
 /* -------------HOME container------------   */
-#header {position: fixed; background-color: white; width: 100%;}
-.home-container {max-width: 100%; height: auto; margin-left: auto; margin-right: auto; margin-top: 130px;}
+#header {
+  position: fixed;
+  top: 0; 
+  padding-left: 10px; 
+  background-color: white; 
+  width: 100%;
+  height: 70px;
+  border-bottom: solid; border-bottom-width: 0.3px; border-color: rgba(96, 125, 139, 0.38);
+  display: block;  
+  background-color: #2abfff;
+}
 
-/*
-#leftbar {float: left; width: 15%; min-height: 100%; font-size: 0.9em; text-transform: uppercase; letter-spacing: 2px; text-align: left; margin-bottom: 15px; color: #aaaaaa; }
-#middlebar {float: left; width: 60%; font-size: 0.9em; text-transform: uppercase; letter-spacing: 2px; text-align: left; margin-bottom: 15px; color: #aaaaaa; margin: 5px 10px 10px 10px; }
-#rightbar {float: right; width: 20%; min-height: 100%; font-size: 0.9em; text-transform: uppercase; letter-spacing: 2px; text-align: left; color: #aaaaaa; margin: 5px 10px auto 10px; border: solid; display: block;}
-*/
-#leftbar {position: fixed; float: left; width: 20%; min-height: 100%; font-size: 0.9em; text-transform: uppercase; letter-spacing: 2px; text-align: left; margin-bottom: 15px; color: #aaaaaa; }
-#middlebar {float: left; width: 60%; font-size: 1em; letter-spacing: 2px; text-align: left; margin-bottom: 15px; color: #aaaaaa; margin-left: 22%; }
-#rightbar {position: fixed; float: left; width: 16%; min-height: 100%; font-size: 0.9em; text-transform: uppercase; letter-spacing: 2px; text-align: left; color: #aaaaaa; margin-left: 82%; margin-top: 0; border: solid;  border-width: 0px; border-color: rgba(96, 125, 139, 0.38);}
+
+
+/* -------------this is for LOGO icon and text------------   */
+#logo {float: left; width: 40%; display: inline-block; margin: 4px; padding: 1px;}
+#logo span {font-size: 1em; }
+#logoicon {display: inline-block; vertical-align: middle; }
+
+.top {width: 50%; float: right; margin: 0 2% 0 2%; align-content: right;}
+
+.top ul {text-align: right; margin-right: 10px;}
+.top ul li {display:inline; padding: 2rem 1rem; font-size: 14px; font-weight: 800;}
+.top li a {padding: 8px; color: blue; font-weight: 500; border: solid; border-width: 0.3px; border-radius: 2px;}
+.top li a:hover {background-color: blue; color: white;}
+/* ----------end of this is for LOGO icon and text------------   */
+
+
+.home-container {width: 100%; min-height: 100%; margin-left: 0; margin-right: 0; margin-top: 130px; margin-bottom: 5px;}
+
+#leftbarbase {
+    position: fixed;
+    top: 130px;
+    bottom: 0;
+    left: 0;
+    padding-bottom: 2em;
+    width: 20%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    z-index: 200;
+}
+
+#leftbar {
+  position: relative;
+  float: left;
+  width: 100%;
+  height: 100%;
+  font-size: 0.9em; text-transform: uppercase; letter-spacing: 2px; text-align: left; color: #aaaaaa;
+  margin-bottom: 15px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  }
+
+ 
+ #middlebar {
+   float: left;
+   width: 60%;
+   margin-left: 21%;
+   min-height: 100%;
+   font-size: 0.9em; letter-spacing: 2px; text-align: left; margin-bottom: 15px; color: #aaaaaa;
+   
+   border: solid;  border-width: 0px; border-color: rgba(96, 125, 139, 0.38);
+  }
+
+  #mainmiddle {padding-bottom: 10px;}
+
+
+#rightbar {   
+  width: 15%;
+  height: 100%;
+  min-height: 100%;
+  font-size: 0.9em; text-transform: uppercase; letter-spacing: 2px; text-align: left; color: #aaaaaa;
+  margin-left: 84%; 
+  margin-top: 0; border-left: solid;  border-width: 1px; border-color: rgba(96, 125, 139, 0.38);
+  display: block;
+
+}
+
+
+ #bottom {
+  clear: both;
+  background-color: grey;
+  height: 300px;
+  width: 78%;
+  margin: 2% 2% 0% 21%;
+  padding: 20px 0;
+  color: #999;
+  text-align: center;
+  border-top: 1px solid #e5e5e5;
+  background: #ECECEC;
+  text-align: center;
+ } 
 
 
 /* ----------end of HOME container--  ----------   */
 
 
-
-
-/* -------------this is for LOGO icon and text------------   */
-#logo {display: inline-block; margin: 4px; }
-#logo span {font-size: 18px; }
-#logoicon {display: inline-block; vertical-align: middle; }
-
-.top {width:100%; margin: 2px 0; padding-bottom: 7px; border-bottom: solid;  border-bottom-width: 0.3px; border-color: rgba(96, 125, 139, 0.38);}
-.top li a {padding: 8px; border: solid; color: white; background-color: blue; border-radius: 0px;}
-/* ----------end of this is for LOGO icon and text------------   */
-
-
 /* -------------this is for left side column------------   */
+
 .text_left {
   width: 100%;
-  padding: 35px 20px 5px 20px;
+  padding: 25px 20px 5px 20px;
   color: blue;
   margin-bottom: 7px;
   border-bottom: 1px solid rgba(96, 125, 139, 0.38);
@@ -57,27 +135,25 @@ html, body {height: auto; width: 100%; }
 }
 
 .div-category-text {
-  width: 70%;
-  margin-top: 7px;
-  font-size: 12px;  
+  width: 100%;
+  height: 24px;
+  margin-top: 0px;
   display: table;
-  margin-left: 37px;
+  margin-left: 30px;
   padding: 2px;
 }
 
-.div-category-text a {text-align: left; font-size: 12px;}
-
-.div-category-text:hover { background-color: blue; color: white;}
+.div-category-text a {width: 100%; height: 100%;  text-align: left; font-size: 12px; padding: 6px 6px; display: block;}
+.div-category-text a:hover { background-color: blue; color: white;}
 
 /* -------end of this is for left side column-----------   */
 
-.toplist li {display:inline; padding: 2rem 1rem; font-size: 14px; font-weight: 800;}
 
-a {    
-    text-decoration: none;
-    text-align: center;   
 
-  }
+
+
+
+
 //a:hover { border-bottom: 1px dashed #428bca; }
 
 .dash { height: 1px; width: 30%; background: black; margin: 20px auto; }
@@ -91,15 +167,152 @@ h5 {
 
 
 
-/* iphone 5 only Mobile ----------- */
-@media only screen and (max-width: 320px) {
-}
-
 
 /* Mobile -----------outline-width:  */
-@media only screen and (min-width: 667px) {
+@media only screen and (max-width: 1024px) {
+
+
+  #leftbarbase {
+    position: fixed;
+    top: 100px;
+    left: 0;
+    padding-bottom: 2em;
+    width: 80%;
+    max-width: 400px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    z-index: 200;
+    display: none;
+    }
+
+   #leftbarbase.open {
+    display: block;
+    }
+
+  #middlebar {
+   float: left;
+   width: 99%;
+   margin-left: 1%;
+   min-height: 100%;
+   font-size: 0.9em; letter-spacing: 2px; text-align: left; margin-bottom: 5px; color: #aaaaaa;   
+  }
+
+
+#rightbar {   
+  width: 99%; 
+  min-height: 100%; 
+  font-size: 0.9em; text-transform: uppercase; letter-spacing: 2px; text-align: left; color: #aaaaaa;
+  margin-left: 1%; 
+  margin-top: 0; border-left: solid;  border-width: 1px; border-color: rgba(96, 125, 139, 0.38);
+  display: block;
+  clear: both;
 }
 
-/* Desktops and laptops ----------- */
-@media only screen and (min-width: 1024px) {
+#bottom {
+  clear: both;
+  background-color: grey;
+  height: 300px;
+  width: 96%;
+  margin: 7% 2% 0% 2%;
+  padding: 40px 0;
+  color: #999;
+  text-align: center;
+  border-top: 1px solid #e5e5e5;
+  background: #ECECEC;
+  text-align: center;
+ } 
+
+
+
+                  .navOpen {
+                    overflow: hidden;
+                  }
+
+                  .home-container111 {
+                    width: 100%; 
+                    min-height: 100%; 
+                    margin-left: 0; 
+                    margin-right: 0; 
+                    margin-top: 130px; 
+                    margin-bottom: 5px;}
+
+                  .home-container {
+                    margin-top: 130px;
+                    transition-duration: 0.5s;
+                    transition-timing-function: swing;
+                    width: 100%;
+                    height: 100%;
+                    position: relative;
+                  }
+                  .home-container.open {                    
+                    transform: translateX(50%) translateY(2%);                    
+                    -webkit-transform: translateX(50%) translateY(2%);
+                    box-shadow: 0 0 50px rgba(0, 0, 0, 0.2);
+                  }
+
+                  .openNav {
+                    transition-duration: 0.5s;
+                    transition-timing-function: swing;
+                    width: 40px;
+                    height: 40px;
+                    background-color: blue;
+                    position: fixed;
+                    top: 70px;
+                    left: 1%;
+                    z-index: 300;
+                  }
+
+         
+                  .openNav:hover {
+                    cursor: pointer;
+                  }
+
+                  
+                  .openNav .icon {
+                    transition-duration: 0.2s;
+                    position: absolute;
+                    width: 20px;
+                    height: 2px;
+                    background-color: white;
+                    top: 20px;
+                    left: 10px;
+                  }
+
+                  .openNav .icon:before,
+                  .openNav .icon:after {
+                    transition-duration: 0.5s;
+                    background-color: white;
+                    position: absolute;
+                    content: "";
+                    width: 20px;
+                    height: 2px;
+                    left: 0px;
+                  }
+                  .openNav .icon:before {
+                    top: -7px;
+                  }
+                  .openNav .icon:after {
+                    top: 7px;
+                  }
+                  .openNav.open {
+                    transform: translateX(100%) translateY(0%);
+                    -webkit-transform: translateX(100%) translateY(0%);
+                  }
+                  .openNav.open .icon {
+                    background-color: transparent;
+                  }
+                  .openNav.open .icon:before,
+                  .openNav.open .icon:after {
+                    top: 0;
+                  }
+                  .openNav.open .icon:before {
+                    transform: rotate(-45deg);
+                    -webkit-transform: rotate(-45deg);
+                  }
+                  .openNav.open .icon:after {
+                    transform: rotate(45deg);
+                    -webkit-transform: rotate(45deg);
+                  }
+                                    
+
 }

@@ -15,7 +15,6 @@ body {
   margin: 0px; 
   font-size: 18px;
   overflow-x:hidden;
-  -webkit-font-smoothing: antialiased;
 }
 
 li { font-size: 1em; text-align: left; margin-bottom: 7px; }
@@ -27,40 +26,47 @@ a {text-decoration: none; text-align: center;}
 
 /* -------------HOME container------------   */
 #header {
-  position: fixed; 
+  position: fixed;
   top: 0; 
   padding-left: 10px; 
   background-color: white; 
   width: 100%;
-  height: 120px;
+  height: 70px;
   border-bottom: solid; border-bottom-width: 0.3px; border-color: rgba(96, 125, 139, 0.38);
+  display: block;  
+  background-color: white;
 }
 
 
 
 /* -------------this is for LOGO icon and text------------   */
-#logo {display: inline-block; margin: 4px; }
-#logo span {font-size: 18px; }
+#logo {float: left; width: 37%; display: inline-block; margin: 4px; padding: 1px;}
+#logo span {font-size: 1em; }
 #logoicon {display: inline-block; vertical-align: middle; }
 
-.top {margin: 2px 0; padding-bottom: 7px; }
-.toplist li {display:inline; padding: 2rem 1rem; font-size: 14px; font-weight: 800;}
-.top li a {padding: 8px; color: white; background-color: blue; border-radius: 0px;}
+
+
+.menu {width: 59%; float: right; margin: 0 1% 0 1%; align-content: right;}
+.menu ul {text-align: right; margin-right: 5px;}
+.menu ul li {display:inline; padding: 0.1rem 0.1rem; font-size: 13px; font-weight: 800;}
+.menu li a {padding: 7px; color: blue; font-weight: 500; border: solid; border-width: 0.3px; border-radius: 2px; border-color: blue;}
+.menu li a:hover {background-color: blue; color: white;}
+
 /* ----------end of this is for LOGO icon and text------------   */
 
 
-.home-container {width: 100%; min-height: 100%; margin-left: 0; margin-right: 0; margin-top: 130px; margin-bottom: 100px;}
+.home-container {width: 100%; min-height: 100%; margin-left: 0; margin-right: 0; margin-top: 120px; margin-bottom: 5px;}
 
 #leftbarbase {
     position: fixed;
-    top: 130px;
+    top: 120px;
     bottom: 0;
     left: 0;
     padding-bottom: 2em;
     width: 20%;
     overflow-x: hidden;
     overflow-y: hidden;
-    z-index: 200;
+    z-index: 101;
 }
 
 #leftbar {
@@ -71,7 +77,8 @@ a {text-decoration: none; text-align: center;}
   font-size: 0.9em; text-transform: uppercase; letter-spacing: 2px; text-align: left; color: #aaaaaa;
   margin-bottom: 15px;
   overflow-x: hidden;
-  overflow-y: scroll;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
   }
 
  
@@ -85,7 +92,7 @@ a {text-decoration: none; text-align: center;}
    border: solid;  border-width: 0px; border-color: rgba(96, 125, 139, 0.38);
   }
 
-  #mainmiddle {padding-bottom: 100px;}
+  #mainmiddle {padding-bottom: 10px;}
 
 
 #rightbar {   
@@ -105,8 +112,8 @@ a {text-decoration: none; text-align: center;}
   background-color: grey;
   height: 300px;
   width: 78%;
-  margin: 2% 2% 2% 21%;
-  padding: 40px 0;
+  margin: 2% 2% 0% 21%;
+  padding: 20px 0;
   color: #999;
   text-align: center;
   border-top: 1px solid #e5e5e5;
@@ -144,13 +151,6 @@ a {text-decoration: none; text-align: center;}
 /* -------end of this is for left side column-----------   */
 
 
-
-
-
-
-
-//a:hover { border-bottom: 1px dashed #428bca; }
-
 .dash { height: 1px; width: 30%; background: black; margin: 20px auto; }
 
 h5 {
@@ -164,7 +164,7 @@ h5 {
 
 
 /* Mobile -----------outline-width:  */
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 760px) {
 
 
   #leftbarbase {
@@ -176,7 +176,6 @@ h5 {
     max-width: 400px;
     overflow-x: hidden;
     overflow-y: hidden;
-    z-index: 200;
     display: none;
     }
 
@@ -189,8 +188,7 @@ h5 {
    width: 99%;
    margin-left: 1%;
    min-height: 100%;
-   font-size: 0.9em; letter-spacing: 2px; text-align: left; margin-bottom: 15px; color: #aaaaaa;   
-   border: solid;  border-width: 0px; border-color: rgba(96, 125, 139, 0.38);   
+   font-size: 0.9em; letter-spacing: 2px; text-align: left; margin-bottom: 5px;   
   }
 
 
@@ -209,7 +207,7 @@ h5 {
   background-color: grey;
   height: 300px;
   width: 96%;
-  margin: 7% 2% 2% 2%;
+  margin: 7% 2% 0% 2%;
   padding: 40px 0;
   color: #999;
   text-align: center;
@@ -223,17 +221,9 @@ h5 {
                   .navOpen {
                     overflow: hidden;
                   }
-                  .home-container {
-                    margin-top: 20px;
-                    transition-duration: 0.5s;
-                    transition-timing-function: swing;
-                    background-color: white;
-                    width: 100%;
-                    height: 100%;
-                    position: relative;
-                    padding: 80px 40px;
-                  }
+                  
                   .home-container.open {                    
+                    transition-duration: 0.5s;
                     transform: translateX(50%) translateY(2%);                    
                     -webkit-transform: translateX(50%) translateY(2%);
                     box-shadow: 0 0 50px rgba(0, 0, 0, 0.2);
@@ -246,9 +236,8 @@ h5 {
                     height: 40px;
                     background-color: blue;
                     position: fixed;
-                    top: 65px;
+                    top: 70px;
                     left: 1%;
-                    z-index: 300;
                   }
 
          
@@ -302,6 +291,9 @@ h5 {
                     transform: rotate(45deg);
                     -webkit-transform: rotate(45deg);
                   }
-                                    
+
+
+                  
+
 
 }

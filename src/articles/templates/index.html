@@ -15,7 +15,7 @@
                     </div>                    
 
                     <div>
-                        <p id="title"> <a href="{% url articles.path %}"> {{ articles.title }} </a></p>
+                        <p id="title"> <a href="{% url "article" id=articles.id %}"> {{ articles.title }} </a></p>
                         <p>{{ articles.content }}</p>
                         <p class="date">{{ articles.auther }}</p>
                         <p class="date">{{ articles.updated }}</p>

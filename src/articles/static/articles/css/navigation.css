@@ -1,0 +1,79 @@
+/*----- Toggle Button -----*/
+.toggle-nav {
+    display:none;
+    float: right;
+}
+ 
+
+
+/*----- Responsive -----*/
+ 
+@media screen and (max-width: 760px) {
+
+    .menu {
+        width:25%;
+        float: right;
+        align-content: left;
+        padding: 15px 40px;        
+        display:inline-block;
+    }
+    #logo {float: left; width: 70%; display: inline-block; margin: 2px; padding: 1px;}
+    #logo span {font-size: 1em; }
+
+    .menu ul.active {
+        display:none;
+    }
+ 
+    .menu ul {
+        width:200px;
+        position:absolute;
+        top:100%;
+        right: 20px;
+        padding:1px;
+        border-radius:3px;
+        background-color: blue;
+        color: white;
+    }
+ 
+    .menu ul:after {
+        width:0px;
+        height:0px;
+        position:absolute;
+        top:0%;
+        right:32px;
+        content:'';
+        transform:translate(0%, -100%);
+        border-left:7px solid transparent;
+        border-right:7px solid transparent;
+        border-bottom:7px solid blue;
+    }
+
+    .menu ul li {padding: 0; font-size: 14px; font-weight: 800;}
+    .menu li a {display:block; padding: 10px; color: white; font-weight: 500; border: solid; border-width: 0.3px; border-radius: 2px;}
+    .menu li a:hover {background-color: white; color: blue;}
+
+  
+    .toggle-nav {
+        padding:5px 10px 5px 10px;
+        margin: 0;
+        float:right;
+        display:inline-block;
+        box-shadow:0px 1px 1px rgba(0,0,0,0.15);
+        border-radius:3px;
+        background:#303030;
+        color:#777;
+        font-size:20px;
+        transition:color linear 0.15s;
+    }
+ 
+    .toggle-nav:hover, .toggle-nav.active {
+        text-decoration:none;
+        color:#66a992;
+    } 
+    
+}
+
+
+@media screen and (max-width: 320px) {
+  #logo span {font-size: 0.8em; }   
+}

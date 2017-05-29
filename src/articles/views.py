@@ -38,7 +38,7 @@ def transformersizing(request):
 	return render(request, 'transformer.html', context)
 
 
-def generalarticles(request, id):
+def article(request, id):
 	instant = get_object_or_404(Articles, id=id)
-	context = {'html': instant.content }
-	return render(request, 'capacitor.html', context)
+	context = {'html': instant.html }
+	return render(request, 'basearticle.html', context)
