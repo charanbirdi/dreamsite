@@ -6,7 +6,14 @@ from django.shortcuts import render, get_object_or_404
 from .models import Articles
 
 # Create your views here.
+
 def index(request):
+	context = {'path': capacitorsizing}
+	return render(request, 'index.html', context)
+
+
+
+def latestarticles(request):
 	total = Articles.objects.all().count()
 	articles = Articles.objects.all()
 	paginator = Paginator(articles, 2) # Show 2 contacts per page
@@ -22,7 +29,7 @@ def index(request):
 		latest_articles = paginator.page(paginator.num_pages)
 
 	context = {'latest_articles': latest_articles, 'total': total, 'latest_articles': latest_articles}
-	return render(request, 'index.html', context)
+	return render(request, 'latestarticles.html', context)
 
 
 def capacitorsizing(request):

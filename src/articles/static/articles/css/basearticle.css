@@ -19,7 +19,7 @@ body {
 
 li { font-size: 1em; text-align: left; margin-bottom: 7px; }
 
-h1, h2, h3, h4 {margin: 10px 5px 7px 5px; color: blue;}
+h1, h2, h3, h4 {margin: 10px 5px 7px 5px; color: #00008B;}
 p {font-size: 0.8em; margin: 7px 5px 7px 5px; }
 a {text-decoration: none; text-align: center;}
 
@@ -29,12 +29,12 @@ a {text-decoration: none; text-align: center;}
   position: fixed;
   top: 0; 
   padding-left: 10px; 
-  background-color: white; 
   width: 100%;
   height: 70px;
   border-bottom: solid; border-bottom-width: 0.3px; border-color: rgba(96, 125, 139, 0.38);
-  display: block;  
-  background-color: white;
+  display: block;
+  background-color: white;  
+  //background: linear-gradient(90deg,#285163,#653f70);
 }
 
 
@@ -49,8 +49,8 @@ a {text-decoration: none; text-align: center;}
 .menu {width: 59%; float: right; margin: 0 1% 0 1%; align-content: right;}
 .menu ul {text-align: right; margin-right: 5px;}
 .menu ul li {display:inline; padding: 0.1rem 0.1rem; font-size: 13px; font-weight: 800;}
-.menu li a {padding: 7px; color: blue; font-weight: 500; border: solid; border-width: 0.3px; border-radius: 2px; border-color: blue;}
-.menu li a:hover {background-color: blue; color: white;}
+.menu li a {padding: 7px; color: #00008B; font-weight: 500; border: solid; border-width: 0.3px; border-radius: 2px; border-color: #00008B;}
+.menu li a:hover {background: linear-gradient(90deg,#285163,#653f70); color: white;}
 
 /* ----------end of this is for LOGO icon and text------------   */
 
@@ -130,7 +130,7 @@ a {text-decoration: none; text-align: center;}
 .text_left {
   width: 100%;
   padding: 25px 20px 5px 20px;
-  color: blue;
+  color: #00008B;
   margin-bottom: 7px;
   border-bottom: 1px solid rgba(96, 125, 139, 0.38);
   font-size: 13px;
@@ -146,7 +146,7 @@ a {text-decoration: none; text-align: center;}
 }
 
 .div-category-text a {width: 100%; height: 100%;  text-align: left; font-size: 12px; padding: 6px 6px; display: block;}
-.div-category-text a:hover { background-color: blue; color: white;}
+.div-category-text a:hover { background-color: #00008B; color: white;}
 
 /* -------end of this is for left side column-----------   */
 
@@ -221,6 +221,17 @@ h5 {
                   .navOpen {
                     overflow: hidden;
                   }
+
+                  .home-container {
+                    margin-top: 70px;
+                    transition-duration: 0.5s;
+                    transition-timing-function: swing;
+                    background-color: white;
+                    width: 100%;
+                    height: 100%;
+                    //position: relative;
+                    padding: 25px 10px;
+                  }
                   
                   .home-container.open {                    
                     transition-duration: 0.5s;
@@ -234,7 +245,7 @@ h5 {
                     transition-timing-function: swing;
                     width: 40px;
                     height: 40px;
-                    background-color: blue;
+                    background-color: #00008B;
                     position: fixed;
                     top: 70px;
                     left: 1%;
